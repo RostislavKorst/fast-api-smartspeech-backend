@@ -47,7 +47,7 @@ async def get_all_papers() -> PapersInResponse:
     ENGINE = create_engine(DATABASE_URL)
     CONN = ENGINE.connect()
     meta = MetaData()
-    PAPERS = Table('papers', meta,
+    PAPERS = Table('papers_new', meta,
                    Column('paperName', Integer, primary_key=True),
                    Column('isUseful', String(255)),
                    Column('isComplicated', Integer),
