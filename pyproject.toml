@@ -1,13 +1,16 @@
 [tool.poetry]
 name = "price-prediction-backend"
 version = "0.1.0"
-description = "Service predicting car or flat price"
+description = "Backend for SmartMarket Studio application ScienceTalk"
 authors = ["Rostislav Korst <korst.ra@phystech.edu>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 fastapi = "^0.68.1"
 uvicorn = "^0.15.0"
+databases = "^0.5.2"
+SQLAlchemy = "^1.4.25"
+PyMySQL = "^1.0.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
