@@ -16,8 +16,8 @@ async def add_new_paper(paper: Paper) -> Paper:
     ENGINE = create_engine(DATABASE_URL)
     CONN = ENGINE.connect()
     meta = MetaData()
-    PAPERS = Table('papers_new', meta,
-                   Column('paperName', Integer, primary_key=True),
+    PAPERS = Table('papers_new2', meta,
+                   Column('paperName', String(255), primary_key=True),
                    Column('isUseful', String(255)),
                    Column('isComplicated', Integer),
                    Column('readPercent', Integer),
@@ -47,8 +47,8 @@ async def get_all_papers() -> PapersInResponse:
     ENGINE = create_engine(DATABASE_URL)
     CONN = ENGINE.connect()
     meta = MetaData()
-    PAPERS = Table('papers_new', meta,
-                   Column('paperName', Integer, primary_key=True),
+    PAPERS = Table('papers_new2', meta,
+                   Column('paperName', String(255), primary_key=True),
                    Column('isUseful', String(255)),
                    Column('isComplicated', Integer),
                    Column('readPercent', Integer),
